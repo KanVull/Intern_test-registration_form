@@ -1,0 +1,25 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.bg-text {
+    font-size: 28px;
+}
+
+.sm-text {
+    font-size: 14px;
+}
+
+.left-side {
+    display: flex;
+    background: linear-gradient(90deg, #007AFF 0%, #0F70DA 100%);
+    color: #FFFFFF;
+    max-width: 814px;
+}
+
+.left-side-title {
+    width: 554px;
+    font-weight: 600;
+    line-height: 42px;
+    letter-spacing: -0.02em;
+}
