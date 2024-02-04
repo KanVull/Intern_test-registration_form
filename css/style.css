@@ -12,7 +12,7 @@ body {
 
 .left-side {
     display: flex;
-    background: linear-gradient(90deg, #007AFF 0%, #0F70DA 100%);
+    background: linear-gradient(#007AFF 0%, #0F70DA 100%);
     color: #FFFFFF;
     max-width: 814px;
 }
