@@ -1,9 +1,33 @@
 body {
     font-family: 'Poppins', sans-serif;
+    font-weight: 400;
 }
 
-.bg-text {
+h1 {
     font-size: 28px;
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+}
+
+input[type="date"]::-webkit-inner-spin-button {
+    display: none;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    color: rgba(45, 55, 72, 0.32);
+    opacity: 1;
+    display: block;
+    background: url("../images/DateTimePicker.svg") no-repeat;
+    width: 20px;
+    height: 20px;
+}
+
+.container {
+    max-width: 748px;
+    min-width: 748px;
 }
 
 .sm-text {
@@ -11,15 +35,26 @@ body {
 }
 
 .left-side {
-    display: flex;
     background: linear-gradient(#007AFF 0%, #0F70DA 100%);
-    color: #FFFFFF;
-    max-width: 814px;
 }
 
 .left-side-title {
-    width: 554px;
-    font-weight: 600;
+    display: flexbox;
+    color: #FFFFFF;
+    /* width: 554px; */
     line-height: 42px;
     letter-spacing: -0.02em;
+}
+
+.circle {
+    height:593px;
+    width:593px;
+    background: linear-gradient(324.93deg, #0F70DA 0.74%, #007AFF 100%);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.date-template {
+    font-size: 10px;
+    line-height: 14px;
 }
