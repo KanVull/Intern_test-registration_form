@@ -70,7 +70,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     position: absolute;
     z-index: 1;
     height: 77%;
-    margin-top: 72px;
+    top: 72px;
 }
 
 .back-phone-left {
