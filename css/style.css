@@ -1,6 +1,8 @@
 body {
     font-family: 'Poppins', sans-serif;
+    font-style: normal;
     font-weight: 400;
+    font-size: 14px;
 }
 
 h1 {
@@ -25,33 +27,80 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     height: 20px;
 }
 
+.container-fluid {
+    height: 100vh;
+}
+
 .container {
     max-width: 748px;
     min-width: 748px;
 }
 
-.sm-text {
-    font-size: 14px;
-}
-
 .left-side {
-    background: linear-gradient(#007AFF 0%, #0F70DA 100%);
+    display: flex;
+    background: linear-gradient(324.93deg, #007AFF 0.74%, #0F70DA 100%);
+    max-width: 814px;
+    height: 100vh;
 }
 
 .left-side-title {
-    display: flexbox;
+    position: relative;
+    padding: 0 12px 0 14px;
+    margin-top: 64px;
+    width: 554px;
     color: #FFFFFF;
-    /* width: 554px; */
-    line-height: 42px;
+    line-height: 150%;
     letter-spacing: -0.02em;
 }
 
+.images-area {
+    height: 593px;
+    width: 593px;
+    margin-top: 82px;
+    margin-bottom: 134px;
+}
+
+.front-phone {
+    z-index: 2;
+    position: absolute;
+    height: 100%;
+}
+
+.back-phone {
+    position: absolute;
+    z-index: 1;
+    height: 77%;
+    margin-top: 72px;
+}
+
+.back-phone-left {
+    transform: translateX(-92px);
+}
+
+.back-phone-right {
+    transform: translateX(92px);
+}
+
 .circle {
-    height:593px;
-    width:593px;
-    background: linear-gradient(324.93deg, #0F70DA 0.74%, #007AFF 100%);
+    position: absolute;
+    z-index: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
-    display: inline-block;
+    background: linear-gradient(324.93deg, #0F70DA 0.74%, #007AFF 100%);
+}
+
+.logo-image {
+    padding: 0;
+    width: 42px;
+    height: 48px;
+}
+
+.logo-title {
+    font-size: 18px;
+    line-height: 21.6px;
+    font-weight: 600;
 }
 
 .date-template {
