@@ -1,0 +1,20 @@
+@import "bootstrap";
+
+/* ------- customize primary buttons -------- */   
+
+$newcolor: #007AFF;
+
+.btn-primary {
+    @include button-variant($newcolor, darken($newcolor, 7.5%), darken($newcolor, 10%), lighten($newcolor,5%), lighten($newcolor, 10%), darken($newcolor,30%));
+    color: #fff;
+    &:hover {
+        color: #fff;
+    }
+}
+
+a {
+    color: $newcolor;
+    &:hover {
+        color: lighten($newcolor, 10%);
+    }
+}
