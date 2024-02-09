@@ -15,7 +15,7 @@
         <!-- Poppins font from Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
         <!-- Custom styles -->
         <link rel="stylesheet" href="./css/style.css">
         <!-- Google button -->
@@ -27,19 +27,19 @@
     <body>
         <div id="root" class="container-fluid">
             <div class="row">
-                <div class="col left-side d-flex flex-column align-items-center justify-content-center">
-                    <div class="px-0 d-flex flex-column align-items-center">
-                        <h1 class="text-center left-side-title">Social media shared today, tomorrow or by location</h1>
+                <div class="col-xxl-5 col-xl-4 col-lg-3 left-side px-0 flex-column align-items-start justify-content-center">
+                    <div class="px-0 d-flex flex-column left-side-content align-items-center">
+                        <h1 class="text-center left-side-title mx-auto my-0">Social media shared today, tomorrow or by location</h1>
                         <div class="images-area position-relative d-flex justify-content-center">
-                            <img class="front-phone" src="./images/phone.png" alt="Phone image">
-                            <img class="back-phone back-phone-left" src="./images/phone.png" alt="Phone image">
-                            <img class="back-phone back-phone-right" src="./images/phone.png" alt="Phone image">
-                            <span class="circle"></span >
+                            <img class="front-phone img-fluid" src="./images/phone.png" alt="Phone image">
+                            <img class="back-phone back-phone-left img-fluid" src="./images/phone.png" alt="Phone image">
+                            <img class="back-phone back-phone-right img-fluid" src="./images/phone.png" alt="Phone image">
+                            <span class="circle"></span>
                         </div>
                     </div>
                 </div>
-                <div class="col d-flex flex-column align-items-center justify-content-center">
-                    <div class="container">
+                <div class="col d-flex flex-column align-items-start justify-content-center">
+                    <div class="container right-side-container align-items-center">
                         <div class="row align-items-center">
                             <div class="col-auto ps-0" style="padding-right: 10px;">
                                 <img class="logo-image" src="./images/Logo.svg" alt="Logo image">
@@ -49,12 +49,12 @@
                             </div>
                         </div>
 
-                        <div class="row" style="margin-top: 61px;">
+                        <div class="row create-acc-title">
                             <h1 class="ps-0">Create account</h1>
                             <span class="ps-0">For business, band or celebrity</span>
                         </div>
 
-                        <form class="container">
+                        <form class="form-container">
                             <div class="row mx-0">
                                 <div class="col-md-6 ps-0 pe-3">
                                     <div class="form-group">
@@ -117,7 +117,7 @@
 
                             <div class="row buttons-group">
                                 <div class="col-md-6 ps-0 pe-3 form-group">
-                                    <button class="btn btn-primary btn-block" type="submit" value="Create account">
+                                    <button class="btn btn-primary btn-block" type="submit" value="Create account" disabled>
                                         <span class="submit-button">Create account</span>
                                     </button>
                                 </div>
@@ -138,12 +138,15 @@
                         <div class="card-footer text-center">
                             <div>Already have an account? <a href="#">Log In</a></div>
                         </div>
-                        <div class="row">
-                            <a href='#'><img alt='Get it on Google Play' src='./images/GooglePlayButton.svg'/></a>
-                            <a href='#'><img alt='Download on the App Store' src='./images/AppStoreButton.svg'/></a>
-                        </div>
-                        </div>
                     </div>
+                    <div class="container">
+                        <div class="row d-flex justify-content-start app-images">
+                            <div class="col">
+                                <a class='app-image' href='#'><img alt='Get it on Google Play' src='./images/GooglePlayButton.svg'/></a>
+                                <a class='app-image' href='#'><img alt='Download on the App Store' src='./images/AppStoreButton.svg'/></a>
+                            </div>
+                        </div>
+                    </div>    
                 </div>
             </div>
         </div>
