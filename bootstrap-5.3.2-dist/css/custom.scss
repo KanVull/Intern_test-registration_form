@@ -1,6 +1,6 @@
 @import "bootstrap";
 
-/* ------- customize primary buttons -------- */   
+/* ------- customize primary button -------- */   
 
 $newcolor: #007AFF;
 
@@ -11,10 +11,17 @@ $newcolor: #007AFF;
     font-weight: 600;
     line-height: 21px;
     letter-spacing: -0.02em;
+    
     &:hover {
-        color: #fff;
+        -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .30), 0 1px 3px 1px rgba(60, 64, 67, .15);
+        box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .30), 0 1px 3px 1px rgba(60, 64, 67, .15);
+        background-color: #ffffff;
+        color: $newcolor;
+        border: none;
     }
 }
+
+/* ------- customize links -------- */  
 
 a {
     color: $newcolor;
