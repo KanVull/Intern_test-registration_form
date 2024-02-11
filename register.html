@@ -61,41 +61,51 @@
                                         <label class="mb-1" for="inputFirstName">First name</label>
                                         <input class="form-control" id="inputFirstName" type="text"
                                             required/>
+                                        <span class="error" id="firstnameError"></span>
                                     </div>
                                 </div>
                                 <div class="col-md-6 right-form-control">
                                     <div class="form-group">
                                         <label class="mb-1" for="inputLastName">Last name</label>
                                         <input class="form-control" id="inputLastName" type="text">
+                                        <span class="error" id="lastnameError"></span>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6 left-form-control">
-                                    <label class="mb-1" for="inputEmailPhone">Email or phone number</label>
-                                    <input class="form-control" id="inputEmailPhone" type="text" required/>
+                                    <div class="form-group">
+                                        <label class="mb-1" for="inputEmailPhone">Email or phone number</label>
+                                        <input class="form-control" id="inputEmailPhone" type="text" required/>
+                                        <span class="error" id="emailphoneError"></span>
+                                    </div>
                                 </div>
                                 <div class="col-md-6 right-form-control">
-                                    <label class="mb-1" for="inputBirthDate">Date of birth <span class="date-template">(MM/DD/YYYY)</span></label>
-                                    <input class="form-control" id="inputBirthDate" type="date"
-                                        value="2000-01-01"
-                                        min="1924-01-01" max="2024-01-01"
-                                        required/>
+                                    <div class="form-group">
+                                        <label class="mb-1" for="inputBirthDate">Date of birth <span class="date-template">(MM/DD/YYYY)</span></label>
+                                        <input class="form-control" id="inputBirthDate" type="date"
+                                            value="2000-01-01"
+                                            min="1924-01-01" max="2024-01-01"
+                                            required/>
+                                        <span class="error" id="birthdateError"></span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6 left-form-control">
                                     <div class="form-group">
-                                        <label class="mb-1" for="inputPassword">Password</label>
-                                        <input class="form-control" id="inputPassword" type="password"
+                                        <label class="mb-1" for="inputPassword1">Password</label>
+                                        <input class="form-control" id="inputPassword1" type="password"
                                             required/>
+                                        <span class="error" id="password1Error"></span>
                                     </div>
                                 </div>
                                 <div class="col-md-6 right-form-control">
                                     <div class="form-group">
-                                        <label class="mb-1" for="inputConfirmPassword">Confirm password</label>
-                                        <input class="form-control" id="inputConfirmPassword" type="password"
+                                        <label class="mb-1" for="inputPassword2">Confirm password</label>
+                                        <input class="form-control" id="inputPassword2" type="password"
                                             required/>
+                                        <span class="error" id="password2Error"></span>
                                     </div>
                                 </div>
                             </div>

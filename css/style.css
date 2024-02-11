@@ -148,11 +148,26 @@ input {
     padding: 0 0 0 16px;
 }
 
+.form-group {
+    margin-bottom: 24px;
+}
+
 .form-control {
     padding: 11px 16px;
     border-radius: 5px;
-    margin-bottom: 24px;
     border-color: #D1D1D1;
+}
+
+.error {
+    display: flex;
+    background-color: #e154545b;
+    color: black;
+    width: 100%;
+    margin: 5px auto;
+    padding: 6px 11px;
+    border: 1px solid #00000018;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px #e15454;
 }
 
 .date-template {
