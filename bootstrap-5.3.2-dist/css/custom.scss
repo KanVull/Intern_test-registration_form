@@ -7,15 +7,18 @@ $newcolor: #007AFF;
 .btn-primary {
     @include button-variant($newcolor, darken($newcolor, 7.5%), darken($newcolor, 10%), lighten($newcolor,5%), lighten($newcolor, 10%), darken($newcolor,30%));
     color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 21px;
+    letter-spacing: -0.02em;
     &:hover {
         color: #fff;
     }
-    font-weight: 600;
 }
 
 a {
     color: $newcolor;
     &:hover {
-        color: lighten($newcolor, 10%);
+        color: lighten($newcolor, 25%);
     }
 }

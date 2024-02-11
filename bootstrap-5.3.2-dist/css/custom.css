@@ -11993,7 +11993,10 @@ textarea.form-control-lg {
   --bs-btn-disabled-bg: #007AFF;
   --bs-btn-disabled-border-color: #0068d9;
   color: #fff;
+  font-size: 14px;
   font-weight: 600;
+  line-height: 21px;
+  letter-spacing: -0.02em;
 }
 .btn-primary:hover {
   color: #fff;
@@ -12003,5 +12006,5 @@ a {
   color: #007AFF;
 }
 a:hover {
-  color: #3395ff;
+  color: #80bdff;
 }/*# sourceMappingURL=custom.css.map */
