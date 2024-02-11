@@ -38,7 +38,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col d-flex flex-column align-items-start justify-content-center">
+                <div class="col right-side d-flex flex-column align-items-start justify-content-center">
                     <div class="container right-side-container align-items-center">
                         <div class="row align-items-center">
                             <div class="col-auto ps-0" style="padding-right: 10px;">
@@ -56,43 +56,48 @@
 
                         <form class="form-container">
                             <div class="row mx-0">
-                                <div class="col-md-6 ps-0 pe-3">
+                                <div class="col-md-6 left-form-control">
                                     <div class="form-group">
                                         <label class="mb-1" for="inputFirstName">First name</label>
-                                        <input class="form-control" id="inputFirstName" type="text">
+                                        <input class="form-control" id="inputFirstName" type="text"
+                                            required/>
                                     </div>
                                 </div>
-                                <div class="col-md-6 ps-3 pe-0">
-                                    <div class="form-group mb-4">
+                                <div class="col-md-6 right-form-control">
+                                    <div class="form-group">
                                         <label class="mb-1" for="inputLastName">Last name</label>
                                         <input class="form-control" id="inputLastName" type="text">
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-md-6 ps-0 pe-3">
+                                <div class="col-md-6 left-form-control">
                                     <label class="mb-1" for="inputEmailAddress">Email address</label>
                                     <input class="form-control" id="inputEmailAddress" type="email"
-                                        aria-describedby="emailHelp"/>
+                                        aria-describedby="emailHelp"
+                                        required/>
                                 </div>
-                                <div class="col-md-6 ps-3 pe-0">
+                                <div class="col-md-6 right-form-control">
                                     <label class="mb-1" for="inputBirthDate">Date of birth <span class="date-template">(MM/DD/YYYY)</span></label>
                                     <input class="form-control" id="inputBirthDate" type="date"
-                                        placeholder=""
-                                        value=""/>
+                                        value="2000-01-01"
+                                        min="1924-01-01" max="2024-01-01"
+                                        required/>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-md-6 ps-0 pe-3">
+                                <div class="col-md-6 left-form-control">
                                     <div class="form-group">
                                         <label class="mb-1" for="inputPassword">Password</label>
-                                        <input class="form-control" id="inputPassword" type="password">
+                                        <input class="form-control" id="inputPassword" type="password"
+                                            required/>
                                     </div>
                                 </div>
-                                <div class="col-md-6 ps-3 pe-0">
+                                <div class="col-md-6 right-form-control">
                                     <div class="form-group">
                                         <label class="mb-1" for="inputConfirmPassword">Confirm password</label>
-                                        <input class="form-control" id="inputConfirmPassword" type="password">
+                                        <input class="form-control" id="inputConfirmPassword" type="password"
+                                            required/>
                                     </div>
                                 </div>
                             </div>
@@ -116,21 +121,23 @@
                             </div>
 
                             <div class="row buttons-group">
-                                <div class="col-md-6 ps-0 pe-3 form-group">
-                                    <button class="btn btn-primary btn-block" type="submit" value="Create account" disabled>
+                                <div class="col-md-6 left-form-control form-group">
+                                    <button class="btn btn-primary btn-block" type="submit" value="Create account">
                                         <span class="submit-button">Create account</span>
                                     </button>
                                 </div>
-                                <div class="col-md-6 ps-3 pe-0 form-group mb-0">
-                                    <button class="btn btn-block gsi-material-button">
-                                        <div class="gsi-material-button-state"></div>
-                                        <div class="gsi-material-button-content-wrapper">
-                                            <div class="gsi-material-button-icon">
-                                                <img style="vertical-align: baseline;" src="./images/GoogleLogo.svg" alt="Google Logo">
+                                <div class="col-md-6 right-form-control form-group mb-0">
+                                    <a href="#">
+                                        <div class="btn btn-block gsi-material-button">
+                                            <div class="gsi-material-button-state"></div>
+                                            <div class="gsi-material-button-content-wrapper">
+                                                <div class="gsi-material-button-icon">
+                                                    <img style="vertical-align: baseline;" src="./images/GoogleLogo.svg" alt="Google Logo">
+                                                </div>
+                                                <span class="gsi-material-button-contents">Sign-in with Google</span>
                                             </div>
-                                            <span class="gsi-material-button-contents">Sign-in with Google</span>
                                         </div>
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
 
@@ -139,11 +146,11 @@
                             <div>Already have an account? <a href="#">Log In</a></div>
                         </div>
                     </div>
-                    <div class="container">
-                        <div class="row d-flex justify-content-start app-images">
+                    <div class="container app-container">
+                        <div class="row app-images">
                             <div class="col">
-                                <a class='app-image' href='#'><img alt='Get it on Google Play' src='./images/GooglePlayButton.svg'/></a>
-                                <a class='app-image' href='#'><img alt='Download on the App Store' src='./images/AppStoreButton.svg'/></a>
+                                <a href='#' style="margin-right: 12px"><img alt='Get it on Google Play' src='./images/GooglePlayButton.svg'/></a>
+                                <a href='#'><img alt='Download on the App Store' src='./images/AppStoreButton.svg'/></a>
                             </div>
                         </div>
                     </div>    

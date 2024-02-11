@@ -15,6 +15,13 @@ a {
     text-decoration: none;
 }
 
+input {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+}
+
 .container-fluid {
     height: 100vh;
     padding: 0;
@@ -45,26 +52,13 @@ a {
     height: 100vh;
 }
 
-@media (max-width: 1049px) {
-    .left-side {
-        display: none;
-    }
-}
-
-@media (min-width: 1400px) {
-    .col-xxl-5 {
-        flex: 0 0 auto;
-        width: 42.4%;
-    }
-}
-
 .left-side-content {
     margin: 64px auto auto;
 }
 
 .left-side-title {
     position: relative;
-    padding: 0 12px 0 14px;
+    padding: 0 11px 0 14px;
     max-width: 554px;
     color: #FFFFFF;
     line-height: 150%;
@@ -77,7 +71,6 @@ a {
     width: 100%;
     aspect-ratio: 1 / 1;
     margin-top: 82px;
-    overflow: hidden;
 }
 
 .front-phone {
@@ -117,9 +110,12 @@ a {
 /* Rigth side - form */
 /* ----------------- */
 
+.right-side {
+    height: 100vh;
+}
+
 .right-side-container {
     max-width: 748px;
-    min-width: 748px;
     margin: 64px auto auto;
 }
 
@@ -144,6 +140,14 @@ a {
     width: 100%;
 }
 
+.left-form-control {
+    padding: 0 16px 0 0;
+}
+
+.right-form-control {
+    padding: 0 0 0 16px;
+}
+
 .form-control {
     padding: 11px 16px;
     border-radius: 5px;
@@ -165,8 +169,17 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     opacity: 1;
     display: block;
     background: url("../images/DateTimePicker.svg") no-repeat;
+    background-position: center;
     width: 20px;
     height: 20px;
+}
+
+input[type="date"]:hover::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+}
+
+input[type="date"][value=""]:not(:focus) {
+    color: transparent;
 }
 
 .form-check-input {
@@ -197,14 +210,81 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     margin-top: 32px;
 }
 
-.app-images {
-    position: relative;
-    margin-top: auto;
-    margin: auto auto 32px;
-    margin-bottom: 32px;
+.app-container {
+    display: block;
+    margin: 0 auto 0;
     max-width: 748px;
 }
 
-.app-image {
-    margin-right: 12px;
+.app-images {
+    position: relative;
+    margin: auto auto 32px;
+}
+
+/* --------------------- */
+/* Responsive UI section */
+/* --------------------- */
+
+@media (max-width: 1049px) {
+    .left-side {
+        display: none;
+    }
+}
+
+@media (min-width: 1400px) {
+    .col-xxl-5 {
+        flex: 0 0 auto;
+        width: 42.4%;
+    }
+}
+
+@media (max-width: 767px) {
+    .right-side {
+        height: max-content;
+    }
+
+    .right-side-container {
+        padding: 0 16px;
+    }
+
+    .left-form-control {
+        padding: 0;
+    }
+
+    .btn-primary {
+        margin-bottom: 10px;
+    }
+    
+    .right-form-control {
+        padding: 0;
+    }
+    
+    .app-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .app-images {
+        margin-top: 32px;
+    }
+}
+
+@media (max-height: 852px) {
+    .left-side {
+        height: auto;
+    }
+
+    .right-side {
+        height: max-content;
+    }
+
+    .app-images {
+        margin: 32px 0;
+    }
+}
+
+@media (max-height: 852px) and (max-width: 767px) {
+    .app-images {
+        margin: 32px auto;
+    }
 }
