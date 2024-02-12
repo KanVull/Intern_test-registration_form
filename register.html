@@ -16,12 +16,12 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+        <!-- Google button -->
+        <link rel="stylesheet" href="./css/gsi.css">
         <!-- Password jQuery plug-in -->
         <link rel="stylesheet" href="./jquery/jquery.passwordRequirements.css">
         <!-- Custom styles -->
         <link rel="stylesheet" href="./css/style.css">
-        <!-- Google button -->
-        <link rel="stylesheet" href="./css/gsi.css">
         <!-- Google Sign-In button script -->
         <script src="https://accounts.google.com/gsi/client" async></script>
     </head>
@@ -56,12 +56,12 @@
                             <span class="ps-0">For business, band or celebrity</span>
                         </div>
 
-                        <form class="form-container">
+                        <form class="form-container" id="registrationForm" novalidate>
                             <div class="row mx-0">
                                 <div class="col-md-6 left-form-control">
                                     <div class="form-group">
                                         <label class="mb-1" for="inputFirstName">First name</label>
-                                        <input class="form-control" id="inputFirstName" type="text"
+                                        <input class="form-control" id="inputFirstName" name="firstname" type="text"
                                             required/>
                                         <span class="error" id="firstnameError"></span>
                                     </div>
@@ -69,7 +69,7 @@
                                 <div class="col-md-6 right-form-control">
                                     <div class="form-group">
                                         <label class="mb-1" for="inputLastName">Last name</label>
-                                        <input class="form-control" id="inputLastName" type="text">
+                                        <input class="form-control" id="inputLastName" name="lastname" type="text">
                                         <span class="error" id="lastnameError"></span>
                                     </div>
                                 </div>
@@ -78,14 +78,14 @@
                                 <div class="col-md-6 left-form-control">
                                     <div class="form-group">
                                         <label class="mb-1" for="inputEmailPhone">Email or phone number</label>
-                                        <input class="form-control" id="inputEmailPhone" type="text" required/>
+                                        <input class="form-control" id="inputEmailPhone" name="emailphone" type="text" required/>
                                         <span class="error" id="emailphoneError"></span>
                                     </div>
                                 </div>
                                 <div class="col-md-6 right-form-control">
                                     <div class="form-group">
                                         <label class="mb-1" for="inputBirthDate">Date of birth <span class="date-template">(MM/DD/YYYY)</span></label>
-                                        <input class="form-control" id="inputBirthDate" type="date"
+                                        <input class="form-control" id="inputBirthDate" name="birthdate" type="date"
                                             value="2000-01-01"
                                             min="1924-01-01" max="2024-01-01"
                                             required/>
@@ -105,7 +105,7 @@
                                 <div class="col-md-6 right-form-control">
                                     <div class="form-group">
                                         <label class="mb-1" for="inputPassword2">Confirm password</label>
-                                        <input class="form-control" id="inputPassword2" type="password"
+                                        <input class="form-control" id="inputPassword2" name="password2" type="password"
                                             required/>
                                         <span class="error" id="password2Error"></span>
                                     </div>
@@ -115,11 +115,11 @@
                             <div class="row">
                                 <div class="col">
                                     <div class="form-check mb-3">
-                                        <input class="form-check-input" type="checkbox" value="" id="checkRememberMe" />
+                                        <input class="form-check-input" name="remember" type="checkbox" id="checkRememberMe" />
                                         <label class="form-check-label" for="checkRememberMe">Remember me</label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="checkTermsAgree">
+                                        <input class="form-check-input" type="checkbox" id="checkTermsAgree">
                                         <label class="form-check-label" for="checkTermsAgree">
                                             I agree to all the <a href="#">Terms</a> and <a href="#">Privacy policy</a>
                                         </label>
@@ -131,7 +131,7 @@
                             </div>
 
                             <div class="row buttons-group">
-                                <div class="col-md-6 left-form-control form-group">
+                                <div class="col-md-6 left-form-control">
                                     <button 
                                         class="btn btn-primary btn-block"
                                         id="submitButton"
@@ -140,7 +140,7 @@
                                         <span class="submit-button">Create account</span>
                                     </button>
                                 </div>
-                                <div class="col-md-6 right-form-control form-group mb-0">
+                                <div class="col-md-6 right-form-control mb-0">
                                     <a href="#">
                                         <div class="btn btn-block gsi-material-button">
                                             <div class="gsi-material-button-state"></div>
@@ -177,13 +177,8 @@
             integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
             crossorigin="anonymous"
         ></script>
-        <script
-            src="./bootstrap-5.3.2-dist/js/bootstrap.js"
-            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-            crossorigin="anonymous"
-        ></script>
+        <script src="./bootstrap-5.3.2-dist/js/bootstrap.js"></script>
 
-        <!-- Custom scripts -->
         <script src="./jquery/jquery-3.7.1.js"></script>
         <script src="./jquery/jquery.passwordRequirements.js"></script>
         <!-- Custom scripts -->
