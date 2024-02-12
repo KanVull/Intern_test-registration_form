@@ -11,6 +11,7 @@
 
         <!-- Bootstrap CSS v5.2.1 -->
         <link rel="stylesheet" href="./bootstrap-5.3.2-dist/css/custom.css">
+        <link rel="stylesheet" href="./bootstrap-5.3.2-dist/bootstrap-icons-1.11.3/font/bootstrap-icons.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
         <!-- Poppins font from Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -95,18 +96,22 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-6 left-form-control">
-                                    <div class="form-group">
+                                    <div class="form-group group-with-icon">
                                         <label class="mb-1" for="inputPassword1">Password</label>
-                                        <input class="form-control pr-password" id="inputPassword1" name="password1" type="password"
-                                            required/>
+                                        <input class="form-control pr-password password" id="inputPassword1" name="password1" type="password">
+                                        <span class="input-group-text toggle-password">
+                                            <i class="bi bi-eye show-password-icon"></i>
+                                        </span>
                                         <span class="error" id="password1Error"></span>
                                     </div>
                                 </div>
                                 <div class="col-md-6 right-form-control">
-                                    <div class="form-group">
+                                    <div class="form-group group-with-icon">
                                         <label class="mb-1" for="inputPassword2">Confirm password</label>
-                                        <input class="form-control" id="inputPassword2" name="password2" type="password"
-                                            required/>
+                                        <input class="form-control password" id="inputPassword2" name="password2" type="password">
+                                        <span class="input-group-text toggle-password">
+                                            <i class="bi bi-eye show-password-icon"></i>
+                                        </span>
                                         <span class="error" id="password2Error"></span>
                                     </div>
                                 </div>

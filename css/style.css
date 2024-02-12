@@ -197,6 +197,40 @@ input[type="date"][value=""]:not(:focus) {
     color: transparent;
 }
 
+.clicked {
+    color: #212529 !important;
+}
+
+.show-password-icon {
+    font-size: 20px;
+    color: #2D374852;
+}
+
+.toggle-password {
+    display: none;
+}
+
+.group-with-icon {
+    position: relative;
+}
+
+.group-with-icon .form-control {
+    padding-right: 2.5rem;
+}
+
+.group-with-icon .input-group-text {
+    position: absolute;
+    /* padding: 0 18px 0 10px; */
+    margin: 28px 7px 1px 0;
+    border: none;
+    background-color: transparent;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    cursor: pointer;
+  }
+
 .form-check-input {
     width: 20px;
     height: 20px;
