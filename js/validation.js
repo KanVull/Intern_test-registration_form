@@ -94,11 +94,7 @@ function validatePassword(value) {
     const passwordRegex = /^(?=.*[0-9])(?=.*[A-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]+$/;
 
     if (!passwordRegex.test(value)) {
-        return `Password must:
-        - contain at least one digit,
-        - one uppercase letter,
-        - one special symbol,
-        - consist of Latin symbols.`;
+        return 'Password doesn\'t meet rules.';
     }
 
     return ''
@@ -107,10 +103,6 @@ function validatePassword(value) {
 function validateConfirmPassword(password, confirmPassword) {
     // returns Error message if validation failed
     // overwise returns empty string
-    if (confirmPassword.trim() === '') {
-        return 'Confirm password is required.';
-    }
-
     if (password !== confirmPassword) {
         return 'Passwords do not match.';
     }

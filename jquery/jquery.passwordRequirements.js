@@ -122,22 +122,18 @@
 					
 					// Check # of characters
 					if ( thisVal.length >= o.numCharacters ) {
-						// console.log("good numCharacters");
 						$(".pr-numCharacters span").addClass("pr-ok");
 						numCharactersDone = true;
 					} else {
-						// console.log("bad numCharacters");
 						$(".pr-numCharacters span").removeClass("pr-ok");
 						numCharactersDone = false;
 					}
 					// lowerCase meet requirements
 					if (o.useLowercase === true) {
 						if ( thisVal.match(lowerCase) ) {
-							// console.log("good lowerCase");
 							$(".pr-useLowercase span").addClass("pr-ok");
 							useLowercaseDone = true;
 						} else {
-							// console.log("bad lowerCase");
 							$(".pr-useLowercase span").removeClass("pr-ok");
 							useLowercaseDone = false;
 						}
@@ -145,11 +141,9 @@
 					// upperCase meet requirements
 					if (o.useUppercase === true) {
 						if ( thisVal.match(upperCase) ) {
-							// console.log("good upperCase");
 							$(".pr-useUppercase span").addClass("pr-ok");
 							useUppercaseDone = true;
 						} else {
-							// console.log("bad upperCase");
 							$(".pr-useUppercase span").removeClass("pr-ok");
 							useUppercaseDone = false;
 						}
@@ -157,11 +151,9 @@
 					// upperCase meet requirements
 					if (o.useNumbers === true) {
 						if ( thisVal.match(numbers) ) {
-							// console.log("good numbers");
 							$(".pr-useNumbers span").addClass("pr-ok");
 							useNumbersDone = true;
 						} else {
-							// console.log("bad numbers");
 							$(".pr-useNumbers span").removeClass("pr-ok");
 							useNumbersDone = false;
 						}
@@ -169,11 +161,9 @@
 					// upperCase meet requirements
 					if (o.useSpecial === true) {
 						if ( thisVal.match(specialCharacter) ) {
-							// console.log("good specialCharacter");
 							$(".pr-useSpecial span").addClass("pr-ok");
 							useSpecialDone = true;
 						} else {
-							// console.log("bad specialCharacter");
 							$(".pr-useSpecial span").removeClass("pr-ok");
 							useSpecialDone = false;
 						}

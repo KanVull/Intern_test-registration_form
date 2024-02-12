@@ -31,14 +31,19 @@ $(function() {
             { name: 'lastname', validator: validateLastName, errorId: 'lastnameError' },
             { name: 'emailphone', validator: validateEmailPhone, errorId: 'emailphoneError' },
             { name: 'birthdate', validator: validateBirthDate, errorId: 'birthdateError' },
-            { name: 'password1', validator: validatePassword, errorId: 'password1Error' },
-            { name: 'password2', validator: validateConfirmPassword, errorId: 'password2Error' }
+            { name: 'password1', validator: validatePassword, errorId: 'password1Error' }
         ];
     
         let isValid = true;
         fieldsToValidate.forEach(field => {
             isValid = validateField(data[field.name], field.validator, field.errorId) && isValid;
         });
+    
+        confirmPasswordError = validateConfirmPassword(data['password1'], data['password2'])
+        if (confirmPasswordError) {
+            setError('password2Error', confirmPasswordError);
+            isValid = false;
+        }
     
         return isValid;
     }
@@ -66,6 +71,21 @@ $(function() {
         useUppercase: true,
         useNumbers: true,
         useSpecial: true,
+    });
+    
+    $('.password').focus(function () {
+        $(this).siblings('.toggle-password').css('display', 'block');
+    });
+
+    $('.toggle-password').click(function (e) {
+        var target = $(this).siblings('.password');
+        if (target.attr('type') === 'password') {
+            target.attr('type', 'text');
+            $(this).find('i').removeClass('bi-eye').addClass('bi-eye-slash');
+        } else {
+            target.attr('type', 'password');
+            $(this).find('i').removeClass('bi-eye-slash').addClass('bi-eye');
+        }
     });
 
     $('#registrationForm').submit(function(e) {
