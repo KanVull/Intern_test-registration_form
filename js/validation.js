@@ -54,7 +54,8 @@ function validateEmailPhone(value) {
     if (value.trim() === '') {
         return 'Email or phone is required.';
     }
-    if (!validateEmail(value) && !validatePhone(value)) {
+
+    if (validateEmail(value) && validatePhone(value)) {
         return 'Invalid email or phone format.'
     }
     return ''

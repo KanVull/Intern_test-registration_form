@@ -57,13 +57,12 @@
                             <span class="ps-0">For business, band or celebrity</span>
                         </div>
 
-                        <form class="form-container" id="registrationForm" novalidate>
+                        <form class="form-container" id="registrationForm" action="#" method="post">
                             <div class="row mx-0">
                                 <div class="col-md-6 left-form-control">
                                     <div class="form-group">
                                         <label class="mb-1" for="inputFirstName">First name</label>
-                                        <input class="form-control" id="inputFirstName" name="firstname" type="text"
-                                            required/>
+                                        <input class="form-control" id="inputFirstName" name="firstname" type="text">
                                         <span class="error" id="firstnameError"></span>
                                     </div>
                                 </div>
@@ -79,7 +78,7 @@
                                 <div class="col-md-6 left-form-control">
                                     <div class="form-group">
                                         <label class="mb-1" for="inputEmailPhone">Email or phone number</label>
-                                        <input class="form-control" id="inputEmailPhone" name="emailphone" type="text" required/>
+                                        <input class="form-control" id="inputEmailPhone" name="emailphone" type="text">
                                         <span class="error" id="emailphoneError"></span>
                                     </div>
                                 </div>
@@ -87,9 +86,7 @@
                                     <div class="form-group">
                                         <label class="mb-1" for="inputBirthDate">Date of birth <span class="date-template">(MM/DD/YYYY)</span></label>
                                         <input class="form-control" id="inputBirthDate" name="birthdate" type="date"
-                                            value="2000-01-01"
-                                            min="1924-01-01" max="2024-01-01"
-                                            required/>
+                                            value=""/>
                                         <span class="error" id="birthdateError"></span>
                                     </div>
                                 </div>

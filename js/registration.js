@@ -9,7 +9,6 @@ $(function() {
         formData.forEach((v, k) => {
             data[k] = v;
         });
-        console.log(data)
         return data;
     }
 
@@ -44,7 +43,7 @@ $(function() {
             setError('password2Error', confirmPasswordError);
             isValid = false;
         }
-    
+
         return isValid;
     }
 
@@ -61,10 +60,12 @@ $(function() {
         $(this).siblings('.error').text('').css('display', 'none');
     });
 
-    $(document).on('change', '#checkTermsAgree', function() {
-        checkButtonState();
+    $('#inputBirthDate').focus(function () {
+        if (!$(this).hasClass('clicked')) {
+            $(this).addClass('clicked');
+        }
     });
-
+    
     $('.pr-password').passwordRequirements({
         numCharacters: 8,
         useLowercase: true,
@@ -88,16 +89,25 @@ $(function() {
         }
     });
 
+    $(document).on('change', '#checkTermsAgree', function() {
+        checkButtonState();
+    });
+
     $('#registrationForm').submit(function(e) {
+        e.preventDefault();
         clearErrors();
 
         formData = collectFormData(this);
         formValid = validateForm(formData)
         if (!formValid) {
-            //
+            console.log('Bad form');
         } else {
-            console.log('Succsess');
+            if (validateEmail(formData['emailphone'])) {
+                formData['login-type'] = 'phone';
+            } else {
+                formData['login-type'] = 'email';
+            }
+            console.log(formData);
         }
-        e.preventDefault();
     });
 });
