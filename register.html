@@ -16,6 +16,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+        <!-- Password jQuery plug-in -->
+        <link rel="stylesheet" href="./jquery/jquery.passwordRequirements.css">
         <!-- Custom styles -->
         <link rel="stylesheet" href="./css/style.css">
         <!-- Google button -->
@@ -95,7 +97,7 @@
                                 <div class="col-md-6 left-form-control">
                                     <div class="form-group">
                                         <label class="mb-1" for="inputPassword1">Password</label>
-                                        <input class="form-control" id="inputPassword1" type="password"
+                                        <input class="form-control pr-password" id="inputPassword1" name="password1" type="password"
                                             required/>
                                         <span class="error" id="password1Error"></span>
                                     </div>
@@ -183,6 +185,8 @@
 
         <!-- Custom scripts -->
         <script src="./jquery/jquery-3.7.1.js"></script>
+        <script src="./jquery/jquery.passwordRequirements.js"></script>
+        <!-- Custom scripts -->
         <script src="./js/registration.js"></script>
         <script src="./js/validation.js"></script>
     </body>
