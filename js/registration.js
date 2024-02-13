@@ -59,8 +59,8 @@ $(function() {
     $(document).on('focus', 'input', function() {
         $(this).siblings('.error').text('').css('display', 'none');
     });
-
-    $('#inputBirthDate').focus(function () {
+    
+    $(document).on('focus', '#inputBirthDate', function () {
         if (!$(this).hasClass('clicked')) {
             $(this).addClass('clicked');
         }
@@ -74,11 +74,12 @@ $(function() {
         useSpecial: true,
     });
     
-    $('.password').focus(function () {
+    $(document).on('focus', '.password', function () {
         $(this).siblings('.toggle-password').css('display', 'block');
     });
 
-    $('.toggle-password').click(function (e) {
+    $(document).on('click', '.toggle-password', function (e) {
+        e.preventDefault();
         var target = $(this).siblings('.password');
         if (target.attr('type') === 'password') {
             target.attr('type', 'text');
@@ -93,7 +94,7 @@ $(function() {
         checkButtonState();
     });
 
-    $('#registrationForm').submit(function(e) {
+    $(document).on('submit', '#registrationForm', function(e) {
         e.preventDefault();
         clearErrors();
 
