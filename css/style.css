@@ -215,13 +215,14 @@ input[type="date"][value=""]:not(:focus) {
 }
 
 .group-with-icon .form-control {
-    padding-right: 2.5rem;
+    padding-right: 50px;
 }
 
 .group-with-icon .input-group-text {
     position: absolute;
-    /* padding: 0 18px 0 10px; */
-    margin: 28px 7px 1px 0;
+    padding-top: 9px;
+    margin-top: 26px;
+    margin-right: 8px;
     border: none;
     background-color: transparent;
     top: 0;
@@ -243,6 +244,15 @@ input[type="date"][value=""]:not(:focus) {
 
 .form-check-label {
     padding-left: 12px;
+}
+
+.success {
+    display: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #FFFFFF;
+    font-size: 16px;
+    box-shadow: 2px 2px 1px #21252950;
 }
 
 .buttons-group {
