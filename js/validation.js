@@ -41,7 +41,7 @@ function validatePhone(value) {
     if (value.trim() === '') {
         return 'Phone is required.';
     }
-    const phoneRegex = /^(?:\+?\d{1,3}\s?)?(?:\(\d{3}\)|\d{3})[\s.-]?\d{3}[\s.-]?\d{4}$/;
+    const phoneRegex = /^([\+][0-9]{1,3}[\s]?)?[(]?[0-9]{2,3}[)]?[-\s\.]?[0-9]{3,4}[-\s\.]?[0-9]{2,3}[-\s\.]?[0-9]{2,3}$/;
     if (!phoneRegex.test(value)) {
         return 'Invalid phone format.'
     }
@@ -90,9 +90,9 @@ function validatePassword(value) {
         return 'Password is required.';
     }
 
-    // Regular expression for validating Latin symbols, at least one number,
-    // one uppercase symbol, and one special symbol
-    const passwordRegex = /^(?=.*[0-9])(?=.*[A-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]+$/;
+    // Regular expression for validating Latin symbols, 8 symbols minimum, at least one number,
+    // one uppercase symbol, one lowercase symbol and one special symbol
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[a-zA-Z\d!@#$%^&*]{8,}$/;
 
     if (!passwordRegex.test(value)) {
         return 'Password doesn\'t meet rules.';
@@ -109,4 +109,17 @@ function validateConfirmPassword(password, confirmPassword) {
     }
 
     return ''
+}
+
+// Exports for Jest unit testing
+
+module.exports = { 
+    validateFirstName: validateFirstName,
+    validateLastName: validateLastName,
+    validateEmail: validateEmail,
+    validatePhone: validatePhone,
+    validateEmailPhone: validateEmailPhone,
+    validateBirthDate: validateBirthDate,
+    validatePassword: validatePassword,
+    validateConfirmPassword: validateConfirmPassword,
 }
