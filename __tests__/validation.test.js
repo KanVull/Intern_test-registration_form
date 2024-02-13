@@ -7,7 +7,7 @@ const {
     validateBirthDate,
     validatePassword,
     validateConfirmPassword,
-} = require('./validation');
+} = require('../js/validation');
 
 describe('Validation Functions', () => {
     describe('validateFirstName', () => {

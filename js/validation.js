@@ -1,6 +1,9 @@
+/**
+ * Validates the first name field.
+ * @param {string} value - The value of the first name input field.
+ * @returns {string} An error message if validation fails, otherwise an empty string.
+ */
 function validateFirstName(value) {
-    // returns Error message if validation failed
-    // overwise returns empty string
     if (value.trim() === '') {
         return 'First name is required.';
     }
@@ -10,9 +13,12 @@ function validateFirstName(value) {
     return '';
 }
 
+/**
+ * Validates the last name field.
+ * @param {string} value - The value of the last name input field.
+ * @returns {string} An error message if validation fails, otherwise an empty string.
+ */
 function validateLastName(value) {
-    // returns Error message if validation failed
-    // overwise returns empty string
     if (value.trim() === '') {
         return 'Last name is required.';
     }
@@ -22,9 +28,12 @@ function validateLastName(value) {
     return '';
 }
 
+/**
+ * Validates the email field.
+ * @param {string} value - The value of the email input field.
+ * @returns {string} An error message if validation fails, otherwise an empty string.
+ */
 function validateEmail(value) {
-    // returns Error message if validation failed
-    // overwise returns empty string
     if (value.trim() === '') {
         return 'Email is required.';
     }
@@ -35,9 +44,12 @@ function validateEmail(value) {
     return ''
 }
 
+/**
+ * Validates the phone number field.
+ * @param {string} value - The value of the phone number input field.
+ * @returns {string} An error message if validation fails, otherwise an empty string.
+ */
 function validatePhone(value) {
-    // returns Error message if validation failed
-    // overwise returns empty string
     if (value.trim() === '') {
         return 'Phone is required.';
     }
@@ -48,9 +60,12 @@ function validatePhone(value) {
     return ''
 }
 
+/**
+ * Validates the email or phone number field.
+ * @param {string} value - The value of the email or phone number input field.
+ * @returns {string} An error message if validation fails, otherwise an empty string.
+ */
 function validateEmailPhone(value) {
-    // returns Error message if validation failed
-    // overwise returns empty string
     if (value.trim() === '') {
         return 'Email or phone is required.';
     }
@@ -61,9 +76,12 @@ function validateEmailPhone(value) {
     return ''
 }
 
+/**
+ * Validates the birth date field.
+ * @param {string} value - The value of the birth date input field.
+ * @returns {string} An error message if validation fails, otherwise an empty string.
+ */
 function validateBirthDate(value) {
-    // returns Error message if validation failed
-    // overwise returns empty string
     if (!value.trim()) {
         return 'Birthday is required.';
     }
@@ -83,15 +101,22 @@ function validateBirthDate(value) {
     return '';
 }
 
+/**
+ * Validates the password field.
+ * @param {string} value - The value of the password input field.
+ * @returns {string} An error message if validation fails, otherwise an empty string.
+ */
 function validatePassword(value) {
-    // returns Error message if validation failed
-    // overwise returns empty string
     if (value.trim() === '') {
         return 'Password is required.';
     }
 
-    // Regular expression for validating Latin symbols, 8 symbols minimum, at least one number,
-    // one uppercase symbol, one lowercase symbol and one special symbol
+    // Regular expression for validating passwords:
+    // - At least 8 characters long
+    // - Contains at least one lowercase letter
+    // - Contains at least one uppercase letter
+    // - Contains at least one digit
+    // - Contains at least one special character
     const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[a-zA-Z\d!@#$%^&*]{8,}$/;
 
     if (!passwordRegex.test(value)) {
@@ -101,9 +126,13 @@ function validatePassword(value) {
     return ''
 }
 
+/**
+ * Validates the confirmation of the password.
+ * @param {string} password - The password to be confirmed.
+ * @param {string} confirmPassword - The confirmation of the password.
+ * @returns {string} An error message if validation fails, otherwise an empty string.
+ */
 function validateConfirmPassword(password, confirmPassword) {
-    // returns Error message if validation failed
-    // overwise returns empty string
     if (password !== confirmPassword) {
         return 'Passwords do not match.';
     }
@@ -111,8 +140,8 @@ function validateConfirmPassword(password, confirmPassword) {
     return ''
 }
 
-// Exports for Jest unit testing
 
+// Exports for Jest unit testing
 module.exports = { 
     validateFirstName: validateFirstName,
     validateLastName: validateLastName,
